@@ -13,7 +13,7 @@ leetcode-solutions/
 ├── Arrays/
 │   └── 001-two-sum.py
 ├── Strings/
-│   └── 125-valid-palindrome.java
+│   └── 125-valid-palindrome.py
 ├── Graphs/
-│   └── 200-number-of-islands.cpp
+│   └── 200-number-of-islands.py
 ├── README.md
