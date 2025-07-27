@@ -1,6 +1,5 @@
 #Solution 1 - Brute Force - double for loop , exploring all combinations ... time complexity O(n^2) and space O(n)
 
-
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         res = []
@@ -16,3 +15,4 @@ class Solution:
             res.append(product)
         
         return res
+
