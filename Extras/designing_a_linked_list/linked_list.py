@@ -28,10 +28,17 @@ class LinkedList:
         return -1 # index error 
     
     def insertHead(self, val: int) -> None:
-        
+        new_node = ListNode(val)
+        new_node.next = self.head.next 
+        self.head.next = new_node
+        # list was empty before inserting 
+        if not new_node.next: 
+            self.tail = new_node 
 
     def insertTail(self, val: int) -> None:
-        
+        self.tail.next = ListNode(val)
+        self.tail = self.tail.next 
+
 
     def remove(self, index: int) -> bool:
         
