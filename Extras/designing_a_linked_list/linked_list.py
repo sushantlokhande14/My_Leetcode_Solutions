@@ -44,4 +44,13 @@ class LinkedList:
         
 
     def getValues(self) -> List[int]:
+
+        curr = self.head.next 
+        res = []
+        while curr: 
+            res.append(curr.val)
+            curr = curr.next 
+        
+        return res 
+        
         
