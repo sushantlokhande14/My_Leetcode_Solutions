@@ -12,3 +12,6 @@ class Solution:
                 res = max(res, area)
 
         return res 
+    
+
+# Optimized solution using two pointers, time complexity O(n), space complexity O(1)
