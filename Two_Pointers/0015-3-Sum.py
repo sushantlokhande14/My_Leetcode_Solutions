@@ -14,3 +14,7 @@ class Solution:
                         res.add(tuple([nums[i],nums[j],nums[k]]))
 
         return [list(i) for i in res ] 
+    
+
+
+# Optimized solution using two pointers, time complexity O(n^2), space complexity O(1)
