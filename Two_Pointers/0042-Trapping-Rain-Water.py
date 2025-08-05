@@ -3,7 +3,10 @@
 # https://leetcode.com/problems/trapping-rain-water/    
 #  This problem can be solved usinng pre-computed arrays for left and right max heights,
 # or using a two-pointer approach.
-#
+
+
+# brute force solution, uses 2 nested loops, time complexity O(n^2), space complexity O(1)
+
 
 
 # Sub optimal- Solution using pre-computed arrays, time complexity O(n), space complexity O(n) 
