@@ -7,6 +7,28 @@
 
 # brute force solution, uses 2 nested loops, time complexity O(n^2), space complexity O(1)
 
+class Solution:
+    def trap(self, height: List[int]) -> int:
+        if not height: 
+            return 0 
+        
+        res = 0 
+
+        n = len(height)
+
+        for i in range(n): 
+            leftMax = rightMax = height[i]
+
+            for j in range(i):
+                leftMax = max(leftMax, height[j])
+
+            for k in range(i+1, n): 
+                rightMax = max(rightMax, height[k])
+
+            res += min(leftMax, rightMax) - height[i]
+
+        
+        return res
 
 
 # Sub optimal- Solution using pre-computed arrays, time complexity O(n), space complexity O(n) 
