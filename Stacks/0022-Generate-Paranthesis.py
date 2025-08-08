@@ -5,7 +5,7 @@
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
         
-        #to store result 
+        #to store result  initialized two stacks 
         res = []
         stack = []
 
