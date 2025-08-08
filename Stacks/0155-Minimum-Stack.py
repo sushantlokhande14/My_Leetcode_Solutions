@@ -2,6 +2,11 @@
 # https://leetcode.com/problems/min-stack/    
 
 
+# This is an optimal solution using another stack to keep track of the minimum element
+# The main stack holds all the elements, while the minstack keeps track of the minimums
+# This allows us to retrieve the minimum element in constant time
+# Time complexity is O(1) for push, pop, top, and getMin operations
+
 class MinStack:
     def __init__(self):
         self.stack = []
