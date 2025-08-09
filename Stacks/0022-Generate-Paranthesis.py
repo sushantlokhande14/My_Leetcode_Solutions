@@ -1,6 +1,9 @@
 # Leetcode 0022. Generate Parentheses
 # https://leetcode.com/problems/generate-parentheses/       
 
+from typing import List
+from collections import deque
+
 
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
@@ -22,4 +25,5 @@ class Solution:
                 stack.pop()
         # Start backtracking with 0 open and closed parentheses
         backtrack(0,0)
-        return res
+        return res 
+    
