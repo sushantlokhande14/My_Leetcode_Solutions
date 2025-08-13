@@ -36,5 +36,18 @@ class Solution:
 
         return maxSum
     
+# Optmal Approach - Kadane's Algorithm using sliding window, dynamic programming
+# time Complexity: O(n) 
 
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        maxSum = nums[0]
+        curSum = 0 
+
+        for n in nums: 
+            curSum = max(curSum , 0 )
+            curSum += n 
+            maxSum = max(curSum , maxSum)
+
+        return maxSum   
 
