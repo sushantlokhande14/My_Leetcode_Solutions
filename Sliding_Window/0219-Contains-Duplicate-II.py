@@ -43,20 +43,18 @@ class Solution:
 
 class Solution:
     def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
-        window = set()
+        window = set()  # Sliding window to store last k elements
         L = 0 
         n = len(nums)
 
         for R in range(n):
-            if R - L > k : 
+            if R - L > k:  # Keep window size at most k
                 window.remove(nums[L])
                 L += 1 
 
-            if nums[R] in window: 
+            if nums[R] in window:  # Duplicate found within k distance
                 return True 
             
-            window.add(nums[R])
+            window.add(nums[R])  # Add current element to window
 
-        return False 
-
-
+        return False  # No duplicates within k distance
