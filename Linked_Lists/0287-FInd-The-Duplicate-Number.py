@@ -17,3 +17,14 @@ class Solution:
                 return nums[i]
             
 
+# Hashmap solution
+# time complexity O(N) where N is total number of nodes in all the lists
+# space complexity O(N) for storing all the nodes in a hashmap
+
+class Solution:
+    def findDuplicate(self, nums: List[int]) -> int:
+        seen = set()
+        for i in nums: 
+            if i in seen: 
+                return i 
+            seen.add(i)
