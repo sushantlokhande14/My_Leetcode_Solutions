@@ -28,3 +28,31 @@ class Solution:
             if i in seen: 
                 return i 
             seen.add(i)
+
+
+# Floyd's Tortoise and Hare (Cycle Detection)
+# time complexity O(N) where N is total number of nodes in all the lists
+# space complexity O(1) because we are not using any extra space
+
+
+class Solution:
+    def findDuplicate(self, nums: List[int]) -> int:
+        
+        fast ,slow = 0,0 
+
+        while True : 
+            slow = nums[slow]
+            fast = nums[nums[fast]]
+            if fast == slow : 
+                break 
+
+
+        slow2 = 0  
+        while True : 
+            slow = nums[slow]
+            slow2 = nums[slow2]
+            if slow == slow2: 
+                return slow
+
+
+        return -1 
