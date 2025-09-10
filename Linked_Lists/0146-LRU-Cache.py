@@ -32,3 +32,8 @@ class LRUCache:
             
         self.cache.insert(0, (key,value))
         
+
+# Optimal solution for LRU Cache
+# time complexity O(1) for both get and put operations
+# space complexity O(N) for storing all the nodes in a list
+
