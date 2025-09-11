@@ -83,3 +83,12 @@ class Solution:
             curr = curr.next
             k -= 1
         return curr
+    
+
+
+# Solution using recursion
+# time complexity O(N) where N is number of nodes in the linked list
+# space complexity O(N/k) where N is number of nodes in the linked list and k is the size of each group
+# in the worst case we will have N/k recursive calls on the call stack
+
+
