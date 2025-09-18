@@ -19,3 +19,9 @@ class Solution:
             speed+= 1 
 
         return speed
+
+
+# Optimal Approach: Binary Search
+# Time Complexity: O(n*log(max(piles)))
+# Space Complexity: O(1)
+
