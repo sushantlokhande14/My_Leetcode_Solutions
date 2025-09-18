@@ -25,21 +25,24 @@ class Solution:
 # Time Complexity: O(n*log(max(piles)))
 # Space Complexity: O(1)
 
-
 class Solution:
     def minEatingSpeed(self, piles: List[int], h: int) -> int:
-        l, r = 1, max(piles)
-        res = r
+        l = 1 
+        r = max(piles)
+        res = max(piles)
 
-        while l <= r:
-            k = (l + r) // 2
+        while l<=r: 
+            hours = 0 
+            k = (l+r)//2
 
-            totalTime = 0
-            for p in piles:
-                totalTime += math.ceil(float(p) / k)
-            if totalTime <= h:
-                res = k
+            for pile in piles: 
+                hours += math.ceil(pile/k)
+
+            if hours<=h : 
+                res = min(res, k)
                 r = k - 1
-            else:
-                l = k + 1
-        return res
+            
+            else: 
+                l = k +1 
+        
+        return res 
