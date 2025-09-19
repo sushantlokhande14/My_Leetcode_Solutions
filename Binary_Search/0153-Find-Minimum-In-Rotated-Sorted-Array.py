@@ -13,3 +13,12 @@ class Solution:
             if nums[i+1]< nums[i]:
                 return nums[i+1]
         return nums[0]
+    
+#brute force 2 
+# Time Complexity: O(nlogn)
+# Space Complexity: O(1)
+
+class Solution:
+    def findMin(self, nums: List[int]) -> int:
+        nums.sort()
+        return nums[0]
