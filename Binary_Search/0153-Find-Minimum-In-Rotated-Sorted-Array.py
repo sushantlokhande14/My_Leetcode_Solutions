@@ -22,3 +22,18 @@ class Solution:
     def findMin(self, nums: List[int]) -> int:
         nums.sort()
         return nums[0]
+    
+# brute force 3 
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+# This approach works because the minimum element in a rotated sorted array is the smallest element, which can be found by simply iterating through the array and keeping track of the minimum value encountered.
+class Solution:
+    def findMin(self, nums: List[int]) -> int:
+        return min(nums)
+    
+
+# Optimal Approach: Binary Search
+# Time Complexity: O(log n)
+# Space Complexity: O(1)
+
+
