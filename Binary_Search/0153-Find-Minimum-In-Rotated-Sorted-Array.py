@@ -57,3 +57,23 @@ class Solution:
                 r = m-1 
             
         return res 
+    
+# optional 
+class Solution:
+    def findMin(self, nums: List[int]) -> int:
+        l, r = 0, len(nums) - 1
+        res = nums[0]
+
+        while l <= r:
+            m = (l + r) // 2
+            res = min(res, nums[m])
+
+            # check which side is sorted
+            if nums[m] >= nums[l]:
+                # left side sorted → discard it
+                l = m + 1
+            else:
+                # right side sorted → discard it
+                r = m - 1
+
+        return res 
