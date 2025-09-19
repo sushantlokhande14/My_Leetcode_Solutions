@@ -35,5 +35,25 @@ class Solution:
 # Optimal Approach: Binary Search
 # Time Complexity: O(log n)
 # Space Complexity: O(1)
+# This approach works because in a rotated sorted array, one half of the array is always sorted. By comparing the middle element with the leftmost and rightmost elements, we can determine which half contains the minimum element and narrow our search accordingly.
 
+class Solution:
+    def findMin(self, nums: List[int]) -> int:
+        l = 0 
+        r = len(nums)-1 
 
+        res = float("inf")
+        while l<=r: 
+
+            if nums[l]< nums[r]:
+                res = min(res, nums[l])
+                break
+
+            m = (l+r)//2
+            res = min(res, nums[m])
+            if nums[m] >= nums[l]:
+                l = m + 1 
+            else: 
+                r = m-1 
+            
+        return res 
