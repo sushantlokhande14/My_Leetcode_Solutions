@@ -54,3 +54,8 @@ class Solution:
             res = merged[mid]
         
         return res 
+
+
+# optimal solution using binary search
+# Time Complexity: O(log(min(m,n))) where m and n are the lengths of the two arrays
+# Space Complexity: O(1)
