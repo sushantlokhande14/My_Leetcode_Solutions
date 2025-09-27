@@ -3,7 +3,7 @@
 # Difficulty: Hard
 
 # Brute force solution 
-# Time Complexity: O(m+n) where m and n are the lengths of the two arrays
+# Time Complexity: O(m+n)log(m+n) where m and n are the lengths of the two arrays
 # Space Complexity: O(m+n) for storing the merged array
 
 class Solution:
